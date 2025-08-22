@@ -7,10 +7,5 @@ image_resource:
     repository: busybox
 
 run:
-  path: sh
-  args:
-  - -exc
-  - |
-    cd /tmp/
-    echo "ok" > file.txt
-    cat file.txt
+  path: echo
+  args: ["hello world"]
