@@ -1,8 +1,16 @@
 ---
 platform: linux
+
 image_resource:
-  type: registry-image
-  source: { repository: busybox }
+  type: docker-image
+  source:
+    repository: busybox
+
 run:
-  path: echo
-  args: ["Hello, nice!"]
+  path: sh
+  args:
+  - -exc
+  - |
+    cd /tmp/
+    echo "ok" > file.txt
+    cat file.txt
