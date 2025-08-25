@@ -1,6 +1,7 @@
 ---
 resources:
 - name: my-git-repo
+  icon: github
   type: git
   source:
     uri: https://github.com/ruanbekker/concourse-test
